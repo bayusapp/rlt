@@ -8,6 +8,11 @@
   <title>Document</title>
   <link href="<?= base_url('assets/') ?>css/bootstrap_rlt.css" rel="stylesheet">
   <link href="<?= base_url('assets/') ?>css/rlt.css" rel="stylesheet">
+  <style>
+    a:hover {
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body style="padding-top: 20px;">
@@ -20,12 +25,22 @@
               <div class="collection-page no-gutters row">
                 <div class="col-12">
                   <p class="collection-description">
-                    Add Catalog Miner | Add Miner List
+                    <a href="#" style="color: #fff">Add Catalog Miner</a> &emsp;&emsp; Add Miner List
                   </p>
                   <div class="collection-title-wrapper">
                     <h2 class="collection-title">
-                      Total bonus power <span class="collection-value">+165.2%</span> |
-                      Total bonus power <span class="collection-value">+165.2%</span>
+                      <?php
+                      $total = 0;
+                      foreach ($data as $d) {
+                        $total = $total + $d->power_miner;
+                      }
+                      if ($total >= 1 && $total <= 999) {
+                        $total = ($total / 1) . " Gh/s";
+                      } elseif ($total >= 1000 && $total <= 999999) {
+                        $total = ($total / 1000) . " Th/s";
+                      }
+                      ?>
+                      Total hash power <span class="collection-value"><?= $total ?></span>
                     </h2>
                   </div>
                   <div class="collection-body-wrapper">
@@ -33,16 +48,16 @@
                       <?php
                       foreach ($data as $d) {
                         if ($d->lvl_miner == 1) {
-                          $lvl = '<img class="collection-product-level-img-size-2" src="https://rollercoin.com/static/img/storage/rarity_icons/level_1.png" width="22" height="16" alt="1">';
+                          $lvl = '<img class="collection-product-level-img-size-' . $d->cell_miner . '" src="https://rollercoin.com/static/img/storage/rarity_icons/level_1.png" width="22" height="16" alt="1">';
                         } elseif ($d->lvl_miner == 2) {
-                          $lvl = '<img class="collection-product-level-img-size-2" src="https://rollercoin.com/static/img/storage/rarity_icons/level_2.png" width="22" height="16" alt="1">';
+                          $lvl = '<img class="collection-product-level-img-size-' . $d->cell_miner . '" src="https://rollercoin.com/static/img/storage/rarity_icons/level_2.png" width="22" height="16" alt="1">';
                         } elseif ($d->lvl_miner == 3) {
-                          $lvl = '<img class="collection-product-level-img-size-2" src="https://rollercoin.com/static/img/storage/rarity_icons/level_3.png" width="22" height="16" alt="1">';
+                          $lvl = '<img class="collection-product-level-img-size-' . $d->cell_miner . '" src="https://rollercoin.com/static/img/storage/rarity_icons/level_3.png" width="22" height="16" alt="1">';
                         } elseif ($d->lvl_miner == 4) {
-                          $lvl = '<img class="collection-product-level-img-size-2" src="https://rollercoin.com/static/img/storage/rarity_icons/level_4.png" width="22" height="16" alt="1">';
-                        } elseif ($d->lvl_miner == null) {
+                          $lvl = '<img class="collection-product-level-img-size-' . $d->cell_miner . '" src="https://rollercoin.com/static/img/storage/rarity_icons/level_4.png" width="22" height="16" alt="1">';
+                        } elseif ($d->lvl_miner == 0) {
                           $lvl = '';
-                        } elseif ($d->lvl_miner == 999) {
+                        } elseif ($d->lvl_miner == 9) {
                           $lvl = '<img class="star" src="https://rollercoin.com/static/images/level_star.4ff18517e5e8eed42060..png" alt="Rating star">';
                         }
                         $power = $d->power_miner;
@@ -59,19 +74,19 @@
                             <div class="collection-product-image-wrapper">
                               <p class="collection-percent-bonus">&nbsp;
                                 Bonus power
-                                <span class="collection-bonus-amount">+0.55%</span>
+                                <span class="collection-bonus-amount">+<?= $d->bonus_power ?>%</span>
                               </p>
                               <div class="collection-product-item-image-wrapper">
                                 <?php
-                                if ($d->lvl_miner != 999) {
+                                if ($d->lvl_miner != 9) {
                                   echo $lvl;
                                 }
                                 ?>
                                 <img src="<?= $d->url_img_miner ?>" class="collection-product-image">
                                 <?php
-                                if ($d->lvl_miner == 999) {
+                                if ($d->lvl_miner == 9) {
                                 ?>
-                                  <div class="rating-star-wrapper collection-product-level-img-size-2">
+                                  <div class="rating-star-wrapper collection-product-level-img-size-<?= $d->cell_miner ?>">
                                     <div class="star-wrapper">
                                       <?= $lvl ?>
                                     </div>
