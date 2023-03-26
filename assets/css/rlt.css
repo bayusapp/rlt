@@ -1,0 +1,481 @@
+.rating-star-wrapper {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center
+}
+
+.rating-star-wrapper .star-wrapper:not(:last-child) {
+  margin-right: 4px
+}
+
+.rating-star-wrapper .star-wrapper .star.extinct {
+  opacity: .25
+}
+
+.collection-card-container {
+  padding: 0 9px 12px;
+  position: relative
+}
+
+@media only screen and (min-width:992px) {
+  .collection-card-container {
+    padding: 0 9px 18px
+  }
+}
+
+.collection-card-container.shaded .collection-main-wrapper {
+  background-color: #232536
+}
+
+.collection-card-container.shaded .collection-main-wrapper .collection-product-image-wrapper,
+.collection-card-container.shaded .collection-main-wrapper .collection-product-info {
+  opacity: .5
+}
+
+.collection-card-container.shaded .collection-description-wrapper,
+.collection-card-container.shaded .collection-description-wrapper .collection-description-block {
+  background-color: #232536
+}
+
+.collection-card-container.shaded .collection-description-wrapper .collection-description-block .craft-details-wrapper,
+.collection-card-container.shaded .collection-description-wrapper .collection-description-block .description-text {
+  opacity: .5
+}
+
+.collection-card-container.active .collection-main-wrapper {
+  border-color: #03e1e4
+}
+
+.collection-card-container .collection-main-wrapper {
+  background-color: #2f3045;
+  border: 1px solid #6a668a;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  -webkit-box-shadow: 0 6px 12px -1px #1f1f2d;
+  box-shadow: 0 6px 12px -1px #1f1f2d;
+  padding: 16px 16px 0;
+  text-align: center
+}
+
+.collection-card-container .collection-main-wrapper .collection-product-image-wrapper {
+  background-color: #1f1f2d;
+  border-radius: 4px;
+  height: 100%;
+  min-height: 200px;
+  padding: 0 48px
+}
+
+.collection-card-container .collection-main-wrapper .collection-product-image-wrapper .collection-percent-bonus {
+  font-family: pixelSC, sans-serif;
+  font-size: 24px;
+  margin: 0;
+  white-space: nowrap
+}
+
+@media only screen and (min-width:992px) {
+  .collection-card-container .collection-main-wrapper .collection-product-image-wrapper .collection-percent-bonus {
+    font-size: 18px
+  }
+}
+
+@media only screen and (min-width:1200px) {
+  .collection-card-container .collection-main-wrapper .collection-product-image-wrapper .collection-percent-bonus {
+    font-size: 22px
+  }
+}
+
+.collection-card-container .collection-main-wrapper .collection-product-image-wrapper .collection-percent-bonus .collection-bonus-amount {
+  color: #03e1e4;
+  font-family: PixelSCBold, sans-serif
+}
+
+.collection-card-container .collection-main-wrapper .collection-product-image-wrapper .collection-product-image {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%
+}
+
+.collection-card-container .collection-main-wrapper .collection-product-image-wrapper .collection-rating-star {
+  padding-bottom: 10px
+}
+
+.collection-card-container .collection-main-wrapper .collection-product-image-wrapper .collection-product-item-image-wrapper {
+  position: relative
+}
+
+.collection-card-container .collection-main-wrapper .collection-product-image-wrapper .collection-product-item-image-wrapper .collection-product-level-img-size-2 {
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -o-pixelated;
+  image-rendering: pixelated;
+  left: 6px;
+  position: absolute;
+  top: 30px
+}
+
+.collection-card-container .collection-main-wrapper .collection-product-image-wrapper .collection-product-item-image-wrapper .collection-product-level-img-size-1 {
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -o-pixelated;
+  image-rendering: pixelated;
+  left: 39px;
+  position: absolute;
+  top: 38px
+}
+
+.collection-card-container .collection-main-wrapper .collection-product-image-wrapper .collection-product-item-image-wrapper .collection-product-image {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%
+}
+
+.collection-card-container .collection-main-wrapper .collection-product-info .collection-product-name {
+  border-bottom: 1px solid #6a668a;
+  font-family: PixelSCBold, sans-serif;
+  font-size: 24px;
+  margin: 0
+}
+
+@media only screen and (min-width:992px) {
+  .collection-card-container .collection-main-wrapper .collection-product-info .collection-product-name {
+    font-size: 18px
+  }
+}
+
+@media only screen and (min-width:1200px) {
+  .collection-card-container .collection-main-wrapper .collection-product-info .collection-product-name {
+    font-size: 22px
+  }
+}
+
+.collection-card-container .collection-main-wrapper .collection-product-info .collection-product-power,
+.collection-card-container .collection-main-wrapper .collection-product-info .collection-product-supply {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #6a668a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: PixelSC, sans-serif;
+  font-size: 20px;
+  justify-content: space-between
+}
+
+.collection-card-container .collection-main-wrapper .collection-product-info .collection-product-supply .supply-value {
+  color: #03e1e4;
+  font-family: PixelSCBold, sans-serif
+}
+
+.collection-card-container .collection-description-wrapper {
+  background-color: #2f3045;
+  border: 1px solid #6a668a;
+  border-radius: 0 0 4px 4px;
+  border-top: none;
+  cursor: pointer;
+  padding: 0 16px;
+  position: relative
+}
+
+.collection-card-container .collection-description-wrapper.opened {
+  border: 1px solid #03e1e4;
+  border-radius: 0 0 4px 4px;
+  border-top: none
+}
+
+@media only screen and (min-width:992px) {
+  .collection-card-container .collection-description-wrapper.opened {
+    padding-bottom: 50px
+  }
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-switcher {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  padding: 13px 0
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-switcher .image {
+  margin: 0 0 3px 10px
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block {
+  background-color: #2f3045;
+  padding: 0;
+  z-index: 1
+}
+
+@media only screen and (min-width:992px) {
+  .collection-card-container .collection-description-wrapper .collection-description-block {
+    border: 1px solid #03e1e4;
+    border-radius: 0 0 4px 4px;
+    border-top: none;
+    left: -1px;
+    padding: 0 16px;
+    position: absolute;
+    right: -1px;
+    top: 0
+  }
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper {
+  border-bottom: 1px solid #6a668a;
+  padding: 12px 0
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper .info-placeholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: PixelSC, sans-serif;
+  font-size: 16px;
+  margin-bottom: 3px
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper .info-placeholder:before {
+  content: url(https://rollercoin.com/static/images/info_icon.c765b2cb9298057b9e65..svg);
+  margin-right: 5px;
+  max-height: 16px;
+  max-width: 16px;
+  padding-top: 3px
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper .info-placeholder .info-cyan {
+  color: #03e1e4;
+  margin-left: 5px
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper .description-text {
+  font-family: PixelSC, sans-serif;
+  font-size: 16px;
+  line-height: 1.14
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper .how-to-get-text {
+  color: #03e1e4;
+  font-family: PixelSC, sans-serif;
+  font-size: 16px;
+  line-height: 1.14;
+  padding-top: 12px
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper .craft-details-wrapper {
+  padding: 12px 0 0
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper .craft-details-wrapper .craft-recipe {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #1f1f2d;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 4px;
+  padding: 4px 8px
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper .craft-details-wrapper .craft-recipe .list-img {
+  margin-right: 10px
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper .craft-details-wrapper .craft-recipe .recipe-text {
+  font-family: PixelSCBold, sans-serif;
+  font-size: 16px
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper .craft-details-wrapper .recipe-item {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  justify-content: space-between;
+  margin-bottom: 4px
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper .craft-details-wrapper .recipe-item .item-title-block {
+  -webkit-box-flex: 0;
+  background-color: #1f1f2d;
+  border-radius: 4px;
+  -ms-flex: 0 0 calc(30% - 2px);
+  flex: 0 0 calc(30% - 2px);
+  font-family: PixelSC, sans-serif;
+  padding: 3px 8px
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper .craft-details-wrapper .recipe-item .item-type-block {
+  -webkit-box-flex: 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #1f1f2d;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 0 1 calc(70% - 2px);
+  flex: 0 1 calc(70% - 2px);
+  justify-content: space-between;
+  padding: 3px 8px
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper .craft-details-wrapper .recipe-item .item-type-block .item {
+  font-family: PixelSCBold, sans-serif
+}
+
+.collection-card-container .collection-description-wrapper .collection-description-block .description-wrapper .craft-details-wrapper .recipe-item .item-type-block .count {
+  font-family: PixelSC, sans-serif
+}
+
+.collection-page {
+  padding: 0
+}
+
+.collection-page h2,
+.collection-page p {
+  margin: 0;
+  padding: 0
+}
+
+.collection-page .collection-title-wrapper {
+  border: 1px solid #03e1e4;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 4px;
+  position: relative;
+  text-align: center
+}
+
+@media only screen and (min-width:992px) {
+  .collection-page .collection-title-wrapper {
+    border: 2px solid #03e1e4;
+    padding: 10px 0 12px
+  }
+}
+
+.collection-page .collection-title-wrapper .collection-title {
+  color: #fff;
+  font-family: PixelSCBold, sans-serif;
+  font-size: 20px
+}
+
+@media only screen and (min-width:992px) {
+  .collection-page .collection-title-wrapper .collection-title {
+    font-size: 24px
+  }
+}
+
+.collection-page .collection-title-wrapper .collection-title .collection-value {
+  color: #03e1e4
+}
+
+.collection-page .collection-description {
+  font-family: PixelSC, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  padding: 0 30px;
+  text-align: center
+}
+
+@media only screen and (min-width:992px) {
+  .collection-page .collection-description {
+    font-size: 20px;
+    margin-bottom: 20px
+  }
+}
+
+.collection-page .collection-tab-panel .nav {
+  margin-bottom: 17px
+}
+
+.collection-page .collection-tab-panel .nav.nav-tabs {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  border-bottom: 1px solid #2f3045;
+  justify-content: space-between
+}
+
+.collection-page .collection-tab-panel .nav.nav-tabs .nav-item {
+  -ms-flex-preferred-size: calc(50% - 10px);
+  flex-basis: calc(50% - 10px)
+}
+
+.collection-page .collection-tab-panel .nav.nav-tabs .nav-item .nav-link {
+  background-color: rgba(47, 48, 69, .35);
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 10px;
+  text-align: center
+}
+
+@media only screen and (min-width:992px) {
+  .collection-page .collection-tab-panel .nav.nav-tabs .nav-item .nav-link {
+    font-size: 20px
+  }
+}
+
+.collection-page .collection-tab-panel .nav.nav-tabs .nav-item .nav-link .tab-text .miner-img {
+  margin-right: 10px
+}
+
+.collection-page .collection-tab-panel .nav.nav-tabs .nav-item .nav-link .tab-text .miners-value {
+  color: #03e1e4
+}
+
+.collection-page .collection-tab-panel .nav.nav-tabs .nav-item .nav-link.active {
+  background-color: #2f3045;
+  border-top: 2px solid #03e1e4;
+  color: #fff
+}
+
+.collection-page .collection-container-info {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  border-bottom: 1px solid #6a668a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: PixelSC, sans-serif;
+  font-size: 20px;
+  justify-content: space-between;
+  margin: 16px 0 14px
+}
+
+@media only screen and (min-width:992px) {
+  .collection-page .collection-container-info {
+    font-size: 24px
+  }
+}
+
+.collection-page .collection-container-info .info-progress,
+.collection-page .collection-container-info .info-title {
+  margin-bottom: 4px
+}
