@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 10, 2023 at 09:28 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 7.4.33
+-- Waktu pembuatan: 25 Jun 2023 pada 04.56
+-- Versi server: 10.4.25-MariaDB
+-- Versi PHP: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,55 +24,76 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `daftar_miner`
+-- Struktur dari tabel `daftar_miner`
 --
 
 CREATE TABLE `daftar_miner` (
+  `id_daftar_miner` int(11) NOT NULL,
+  `id_miner` int(11) DEFAULT NULL,
+  `lvl_miner` int(11) DEFAULT NULL,
+  `power_miner` bigint(20) DEFAULT NULL,
+  `bonus_power` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `miner`
+--
+
+CREATE TABLE `miner` (
   `id_miner` int(11) NOT NULL,
   `nama_miner` varchar(255) DEFAULT NULL,
   `url_img_miner` varchar(255) DEFAULT NULL,
-  `lvl_miner` int(11) DEFAULT NULL,
-  `power_miner` bigint(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `cell_miner` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `daftar_miner`
+-- Dumping data untuk tabel `miner`
 --
 
-INSERT INTO `daftar_miner` (`id_miner`, `nama_miner`, `url_img_miner`, `lvl_miner`, `power_miner`) VALUES
-(1, 'Perfection', 'https://static.rollercoin.com/static/img/market/miners/631f77d58238ed283a23283a.gif', 2, 924000),
-(2, 'Sweets Stealer', 'https://static.rollercoin.com/static/img/market/miners/6399c3811c483a58f70e9d76.gif', 2, 53655),
-(3, 'Helipop', 'https://static.rollercoin.com/static/img/market/miners/6399c3451c483a58f70e99f6.gif', 3, 435225),
-(4, 'Disco-Roll', 'https://static.rollercoin.com/static/img/market/miners/6399c3411c483a58f70e99be.gif', 4, 523635),
-(5, 'Mergedge', 'https://static.rollercoin.com/static/img/market/miners/631f7b6f8238ed283a2352bb.gif', 4, 55755),
-(6, 'Mergedge', 'https://static.rollercoin.com/static/img/market/miners/631f7b6f8238ed283a2352bb.gif', 3, 21420),
-(7, 'The Savantron', 'https://static.rollercoin.com/static/img/market/miners/631f7b538238ed283a235169.gif', 3, 149730),
-(8, 'RollerShow', 'https://static.rollercoin.com/static/img/market/miners/631f7b488238ed283a2350e7.gif', 3, 498960),
-(9, 'Dancing Queen', 'https://static.rollercoin.com/static/img/market/miners/631f7af68238ed283a234d0b.gif', 2, 180180),
-(10, 'Jungle King', 'https://static.rollercoin.com/static/img/market/miners/631f7af38238ed283a234ce4.gif', 4, 242445),
-(11, 'Deepdiver', 'https://static.rollercoin.com/static/img/market/miners/631f7a938238ed283a234879.gif', 2, 28875),
-(12, 'Afterparty', 'https://static.rollercoin.com/static/img/market/miners/631f7a728238ed283a2346f3.gif', 2, 288750),
-(13, 'Mine’n\'Bass', 'https://static.rollercoin.com/static/img/market/miners/631f7a618238ed283a234630.gif', 2, 115500);
+INSERT INTO `miner` (`id_miner`, `nama_miner`, `url_img_miner`, `cell_miner`) VALUES
+(1, 'RollerMiner S5+', 'https://static.rollercoin.com/static/img/market/miners/5a0b08a9d1d9ee5894f36f2f.gif?v=1.0.3', 1),
+(2, 'Rolleron Miner 761', 'https://static.rollercoin.com/static/img/market/miners/5a0b08afd1d9ee5894f36f31.gif?v=1.0.3', 1),
+(3, 'Dragonroller 16T', 'https://static.rollercoin.com/static/img/market/miners/5a0b08b1d1d9ee5894f36f33.gif?v=1.0.3', 2),
+(4, 'Rollerfury B8', 'https://static.rollercoin.com/static/img/market/miners/5a0b08b3d1d9ee5894f36f34.gif?v=1.0.3', 2),
+(5, 'Dream Demolisher 3000', 'https://static.rollercoin.com/static/img/market/miners/5e2ee460041b386e78b97c2a.gif?v=1.0.3', 2),
+(6, 'Gold Digger', 'https://static.rollercoin.com/static/img/market/miners/5e2ee460041b386e78b97c29.gif?v=1.0.3', 1),
+(7, 'Scarabey', 'https://static.rollercoin.com/static/img/market/miners/5e2ee460041b386e78b97c28.gif?v=1.0.3', 1),
+(8, 'El Monstro', 'https://static.rollercoin.com/static/img/market/miners/5f9ae5584ac419fdd08d08cd.gif?v=1.0.3', 2),
+(9, 'DOGER 420', 'https://static.rollercoin.com/static/img/market/miners/607eedae65dce86c86e95319.gif?v=1.0.3', 2);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `daftar_miner`
+-- Indeks untuk tabel `daftar_miner`
 --
 ALTER TABLE `daftar_miner`
+  ADD PRIMARY KEY (`id_daftar_miner`);
+
+--
+-- Indeks untuk tabel `miner`
+--
+ALTER TABLE `miner`
   ADD PRIMARY KEY (`id_miner`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `daftar_miner`
+-- AUTO_INCREMENT untuk tabel `daftar_miner`
 --
 ALTER TABLE `daftar_miner`
-  MODIFY `id_miner` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_daftar_miner` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `miner`
+--
+ALTER TABLE `miner`
+  MODIFY `id_miner` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -479,3 +479,66 @@
 .collection-page .collection-container-info .info-title {
   margin-bottom: 4px
 }
+
+.crafting-confirmation-wrapper {
+  width: 100%
+}
+
+.crafting-confirmation-wrapper .confirmation-title {
+  font-family: PixelSCBold, sans-serif;
+  font-size: 20px;
+  line-height: 1.1;
+  margin-bottom: 10px
+}
+
+@media only screen and (min-width:992px) {
+  .crafting-confirmation-wrapper .confirmation-title {
+    font-size: 16px;
+    line-height: 1.4
+  }
+}
+
+.crafting-confirmation-wrapper .confirmation-merge-info {
+  font-family: PixelSC, sans-serif;
+  font-size: 16px
+}
+
+.confirmation-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+.confirmation-buttons .tree-dimensional-button {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50%
+}
+
+.confirmation-buttons .tree-dimensional-button:first-child {
+  margin-right: 12px
+}
+
+.confirmation-buttons .tree-dimensional-button.btn-red {
+  -webkit-box-shadow: 0 6px #620a12, 0 10px #1f1f2c;
+  box-shadow: 0 6px #620a12, 0 10px #1f1f2c
+}
+
+.confirmation-buttons .tree-dimensional-button.btn-red>span {
+  background-color: #dc3545;
+  border: 1px solid #ff8490;
+  -webkit-box-shadow: 0 -1px #dc3545, 0 1px #1f1f2c;
+  box-shadow: 0 -1px #dc3545, 0 1px #1f1f2c;
+  color: #fff
+}
+
+.confirmation-buttons .tree-dimensional-button .btn-text {
+  font-size: 16px;
+  line-height: 24px
+}
+
+@media only screen and (min-width:992px) {
+  .confirmation-buttons .tree-dimensional-button .btn-text {
+    font-size: 16px
+  }
+}

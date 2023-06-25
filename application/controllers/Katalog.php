@@ -27,4 +27,15 @@ class Katalog extends CI_Controller
       echo 'Sukses';
     }
   }
+
+  public function hapus()
+  {
+    $id = $this->input->post('id');
+    if (isset($id)) {
+      $this->db->delete('daftar_miner', array('id_daftar_miner' => $id));
+      redirect();
+    } else {
+      echo 'ilegal';
+    }
+  }
 }
