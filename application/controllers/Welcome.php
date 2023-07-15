@@ -22,7 +22,9 @@ class Welcome extends CI_Controller
 	public function index()
 	{
 		// $this->load->view('welcome_message');
-		$data['data'] = $this->db->select('*')->from('daftar_miner')->order_by('power_miner', 'desc')->get()->result();
+		// $data['data'] = $this->db->select('*')->from('daftar_miner')->order_by('power_miner', 'desc')->get()->result();
+		$query = $this->db->query('SELECT miner.nama_miner, miner.url_img_miner, miner.cell_miner, daftar_miner.id_daftar_miner, daftar_miner.lvl_miner, daftar_miner.power_miner, daftar_miner.bonus_power FROM daftar_miner JOIN miner ON daftar_miner.id_miner = miner.id_miner ORDER BY daftar_miner.power_miner DESC')->result();
+		$data['data']	= $query;
 		$this->load->view('view_rlt', $data);
 	}
 }
